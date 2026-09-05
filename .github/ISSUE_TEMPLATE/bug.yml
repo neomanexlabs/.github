@@ -1,0 +1,75 @@
+name: Bug report
+description: Something published by Neomanex Labs does not work as documented
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please do not report security vulnerabilities here.
+        Use https://neomanex.com/contact with "Security" in the subject instead.
+  - type: dropdown
+    id: artifact
+    attributes:
+      label: Artifact
+      description: Which published artifact is affected
+      options:
+        - opencode Helm chart
+        - opencode container image
+        - regrun
+        - Other (say which in the description)
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Artifact version
+      description: Chart version, image tag, or package version
+      placeholder: "1.4.0"
+    validations:
+      required: true
+  - type: input
+    id: upstream_version
+    attributes:
+      label: Upstream version
+      description: Version of the underlying project, for example the OpenCode version the chart runs
+      placeholder: "1.14.48"
+    validations:
+      required: false
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Exact commands and values files, with secrets removed
+      placeholder: |
+        1. helm install opencode oci://ghcr.io/neomanexlabs/charts/opencode --version 1.4.0 -f values.yaml
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and output
+      description: Relevant logs, rendered manifests, or error output. Remove tokens and hostnames you do not want public.
+      render: shell
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Kubernetes version and distribution, or OS and Python version
+      placeholder: "k8s 1.31, GKE"
+    validations:
+      required: false

@@ -1,0 +1,43 @@
+name: Feature request
+description: Suggest a capability for something published by Neomanex Labs
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: artifact
+    attributes:
+      label: Artifact
+      options:
+        - opencode Helm chart
+        - opencode container image
+        - regrun
+        - Other (say which in the description)
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do that you cannot do today
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: What the artifact would do instead. For a chart, name the values keys you expect.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+      description: Workarounds you tried, and why they are not enough
+    validations:
+      required: false
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I am willing to open a pull request for this
+          required: false

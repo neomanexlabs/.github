@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Work with Neomanex
+    url: https://neomanex.com/contact
+    about: Commercial questions, consulting, and anything that is not a bug or a feature request
+  - name: Report a security vulnerability
+    url: https://neomanex.com/contact
+    about: Use the contact page with "Security" in the subject. Do not open a public issue.
