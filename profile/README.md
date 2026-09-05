@@ -14,7 +14,7 @@ Helm chart for OpenCode: one AI coding agent server per repository on Kubernetes
 persistent workspaces, git identity and RBAC as values. Install from the OCI registry:
 
 ```bash
-helm install opencode oci://ghcr.io/neomanexlabs/charts/opencode --version 1.4.0
+helm install opencode oci://ghcr.io/neomanexlabs/charts/opencode --version 1.4.1
 ```
 
 Or from the chart repository index:
@@ -23,7 +23,6 @@ Or from the chart repository index:
 helm repo add neomanexlabs https://neomanexlabs.github.io/helm-charts
 ```
 
-Both install paths go live with release 1.4.0.
 
 ### [regrun](https://github.com/daviunx/regrun)
 
@@ -62,4 +61,4 @@ This project is part of that work. It is the same code we run ourselves.
 
 - Website: https://neomanex.com
 - Work with us: https://neomanex.com/contact
-- Products: [Gnosari](https://gnosari.com) (AI agents for your business) and [ConvOps](https://convops.app) (AI-first operations)
+- Products: [Gnosari](https://gnosari.com) (conversational data collection: AI agents that turn conversations into structured data) and [ConvOps](https://convops.app) (AI-first operations)
