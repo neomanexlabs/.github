@@ -17,6 +17,14 @@ persistent workspaces, git identity and RBAC as values. Install from the OCI reg
 helm install opencode oci://ghcr.io/neomanexlabs/charts/opencode --version 1.4.3
 ```
 
+Helm chart for Redis: Sentinel high availability with automatic failback of the master
+role, role-aware readiness and persisted Sentinel state. Installs with default values on
+any cluster:
+
+```bash
+helm install redis oci://ghcr.io/neomanexlabs/charts/redis --version 1.1.0
+```
+
 Or from the chart repository index:
 
 ```bash
