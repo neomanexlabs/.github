@@ -10,11 +10,13 @@ This organization holds the code we open source. It is the same code we run ours
 
 ### [helm-charts](https://github.com/neomanexlabs/helm-charts)
 
-Helm chart for OpenCode: one AI coding agent server per repository on Kubernetes, with
-persistent workspaces, git identity and RBAC as values. Install from the OCI registry:
+Helm chart for OpenCode: runs the coding agent as a service in your cluster, its web UI
+and HTTP API behind your own ingress, one persistent workspace per git repository. Your
+agent stays reachable from any browser and the session outlives the laptop. Install from
+the OCI registry:
 
 ```bash
-helm install opencode oci://ghcr.io/neomanexlabs/charts/opencode --version 1.4.4
+helm install opencode oci://ghcr.io/neomanexlabs/charts/opencode --version 1.4.5
 ```
 
 Helm chart for Redis: Sentinel high availability with automatic failback of the master
